@@ -8,12 +8,22 @@
 
 /////////////////////////zone d'attente
 // uncomment lines for testing
-$users = [];
+//$users = [];
 // $users = ['Simon'];
-// $users = ['Yohan'];
+ // $users = ['Yohan'];
 // $users = ['Pierre', 'Marie'];
-// $users = ['Paul', 'Arthur'];
+//$users = ['Paul', 'Arthur'];
 // $users = ['Arthur', 'Paul', 'Julien', 'Simon', 'Valentin', 'Laurent'];
-// $users = ['Virginie', 'Paul', 'Julien', 'Simon'];
+$users = ['Virginie', 'Paul', 'Julien', 'Simon'];
 
 //write you're code below
+if (count($users) === 0) {
+    echo "Soyez le premier à aimer cette publication";
+} else if (count($users) === 1) {
+    echo "$users[0] aime cette publication";
+} else if (count($users) === 2) {
+    echo $users[0]  . " et " . $users[1] . " aiment cette publication";
+} else { 
+    echo $users[array_rand($users)] . " et " . (count($users) - 1) . " autres personnes ont aimé cette publication.";
+}
+
